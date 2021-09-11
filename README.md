@@ -1,6 +1,15 @@
 # Ansible Role: Docker
 
-[![CI](https://github.com/geerlingguy/ansible-role-docker/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-docker/actions?query=workflow%3ACI)
+**Attention!**
+
+This is a fork from [geerlingguy.docker](https://galaxy.ansible.com/geerlingguy/docker) role with `docker-compose`
+command-line completion installation enabled,
+using [PR #301](https://github.com/geerlingguy/ansible-role-docker/pull/301). Please, feel free to use this
+role if you cannot wait for corresponding PR to be merged. I will mark this role as deprecated when the original role is
+fixed, but nobody knows when it will be since [Jeff Geerling](https://www.jeffgeerling.com/) is a good but
+[really busy fellow](https://www.jeffgeerling.com/blog/2020/enabling-stale-issue-bot-on-my-github-repositories).
+
+[![CI](https://github.com/webarchitect609/ansible-role-docker/workflows/CI/badge.svg?event=push)](https://github.com/webarchitect609/ansible-role-docker/actions?query=workflow%3ACI)
 
 An Ansible Role that installs [Docker](https://www.docker.com) on Linux.
 
@@ -84,7 +93,7 @@ Many users of this role wish to also use Ansible to then _build_ Docker images a
 
   roles:
     - geerlingguy.pip
-    - geerlingguy.docker
+    - webarchitect609.docker
 ```
 
 ## Dependencies
@@ -96,7 +105,7 @@ None.
 ```yaml
 - hosts: all
   roles:
-    - geerlingguy.docker
+    - webarchitect609.docker
 ```
 
 ## License
